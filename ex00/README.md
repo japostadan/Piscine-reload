@@ -49,24 +49,19 @@ echo "12" > test4
 touch -mat 202406012146 test1
 touch -h -t 202406012047 test0
 touch -h -t 202406012220 test6
+...
 ```
 
-### 3. Set File Permissions
+### 4. Set File Permissions
 ```bash
 chmod 715 test0
 
 chmod 714 test1
-
-chmod 404 test3
-
-chmod 641 test4
-
-chmod 404 test5
-
+...
 # test6 is a symbolic link and keeps its default permissions (lrwxr-xr-x)
 ```
 
-### 4. Understanding the Permission Numbers
+### 5. Understanding the Permission Numbers
 Breaking down the chmod numbers:
 7 = 4+2+1 (read/write/execute)  
 6 = 4+2 (read/write)  
@@ -77,7 +72,7 @@ Breaking down the chmod numbers:
 1 = 1 (execute)
 0 = --- (no permissions)
 
-### 5. Create the Archive
+### 6. Create the Archive
 After creating all files with correct permissions:
 ```bash
 tar -cf exo.tar *
